@@ -103,6 +103,27 @@ Examples:
 
 ---
 
+## Agent Activation
+
+> **IMPORTANT:** This file only works if AI agents are told to read it. Add the
+> following to your project-level or global `AGENTS.md` so agents check for
+> `SUMMARY.md` before scanning the repo:
+>
+> ```markdown
+> ## Codebase Orientation
+>
+> - **Project Summary (`SUMMARY.md`):** Always check the workspace root for
+>   `SUMMARY.md` at session initialization. Read it before exploring the codebase
+>   -- it provides a source map so you can navigate directly to relevant files
+>   instead of scanning every directory. If the project doesn't have one, offer
+>   to create it from a template.
+> ```
+>
+> Without this rule, agents will likely skip this file and scan the entire repo
+> instead.
+
+---
+
 ## How to Navigate by Task
 
 | If you need to... | Go to... |

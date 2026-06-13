@@ -32,8 +32,27 @@ repo size.
 1. Copy `SUMMARY_TEMPLATE.md` to your repo root as `SUMMARY.md`
 2. Fill in the `{{PLACEHOLDERS}}` with your project's specifics
 3. Commit and push
+4. **Activate it** -- add an agent rule so AI agents actually read it (see below)
 
 That's it. No build step, no config, no runtime dependency.
+
+## Agent Activation
+
+Creating `SUMMARY.md` is only half the step. AI agents won't read it unless their
+rules tell them to. Add the following to your project-level or global `AGENTS.md`:
+
+```markdown
+## Codebase Orientation
+
+- **Project Summary (`SUMMARY.md`):** Always check the workspace root for
+  `SUMMARY.md` at session initialization. Read it before exploring the codebase
+  -- it provides a source map so you can navigate directly to relevant files
+  instead of scanning every directory. If the project doesn't have one, offer
+  to create it from a template.
+```
+
+Without this rule, `SUMMARY.md` sits silently at the repo root and most agents
+will never see it.
 
 ## Template
 
