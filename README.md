@@ -36,6 +36,12 @@ repo size.
 
 That's it. No build step, no config, no runtime dependency.
 
+## Social Preview
+
+![SUMMARY.md social preview](./assets/summary-md-social-preview.png)
+
+Open Graph / GitHub social preview asset, sized at **1200×630**.
+
 ## Agent Activation
 
 Creating `SUMMARY.md` is only half the step. AI agents won't read it unless their
